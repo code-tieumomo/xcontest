@@ -4,12 +4,19 @@
     --secondary-color: #ffc94f;
 }
 
+html {
+    scroll-padding-top: 20px;
+}
+
 body {
     background-color: #ffc94f;
     font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
 }
 
-h1,h3,h5 {
+h1,
+h3,
+h5 {
     font-family: "Sriracha", cursive;
 }
 
@@ -102,17 +109,22 @@ h1,h3,h5 {
 
 /* Tết introduce */
 #introduce {
-    margin-top: 100px;
     color: var(--primary-color);
 }
 
 #introduce > div:nth-child(1) > img {
     border-radius: 10px;
-    height: 500px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+#introduce > div:nth-child(1) > img:hover {
+    transform: scale(1.1);
 }
 
 /* Tết introduce 2 */
 #introduce-2 {
+    margin-top: 30px;
     color: var(--primary-color);
 }
 
@@ -122,40 +134,112 @@ h1,h3,h5 {
 
 #introduce-2 > div:nth-child(2) > img {
     border-radius: 10px;
-    height: 500px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+#introduce-2 > div:nth-child(2) > img:hover {
+    transform: scale(1.1);
 }
 
 /* Food */
 #foods {
-    margin-top: 100px;
     color: var(--primary-color);
 }
 
 #food {
     margin-top: 20px;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card {
+#food .card {
     background-color: transparent;
     border: none;
     color: var(--primary-color);
     border-radius: 0;
-    margin-right: 30px;
     margin-bottom: 20px;
+    width: calc((100% - 45px) / 4);
+    cursor: help;
 }
 
-.card-body {
-    padding: var(--bs-card-spacer-y) 0
+#food .card-body {
+    padding: var(--bs-card-spacer-y) 0;
 }
 
-.card-img-top {
+#food .card-img-top {
     border-radius: 7px;
     height: 165px;
     object-fit: cover;
+    transition: 0.5s;
 }
 
+#food .card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+#container-1,
+#container-2,
+#container-3 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#container-1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    background-image: url("https://img.freepik.com/free-vector/chinese-new-year-mockup-illustration_53876-74881.jpg?w=826&t=st=1673089788~exp=1673090388~hmac=a0a1e9daa428dd5638ac7f08fa12353d998fc327281ce54d866bd9dbeb0da7ad");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container-2::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    background-image: url("https://img.freepik.com/free-vector/watercolor-chinese-new-year-background_52683-80244.jpg?w=1380&t=st=1673090964~exp=1673091564~hmac=0dc732e7b0c7b4de037f55d02720b70291430ed7972fa99b7c837f4ae286aac9");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#container-3::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    background-image: url("https://img.freepik.com/free-vector/flat-chinese-new-year-background_23-2149228556.jpg?w=1380&t=st=1673090919~exp=1673091519~hmac=ec99107d563564d21af43a329ba5d1dee380382cd8525c424e8873f854a5d02c");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#footer {
+    background-color: #cb0000;
+    color: var(--secondary-color);
+    padding: 20px;
+    font-weight: 700;
+}
 
 /* Animation */
 @keyframes bounce {
@@ -167,5 +251,68 @@ h1,h3,h5 {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #hero > .text > h1,
+    #hero > .text > h2 {
+        font-size: 50px;
+    }
+
+    #hero > .text > h2 {
+        font-size: 70px;
+    }
+
+    #hero > .text > .xcontest {
+        max-width: 75%;
+    }
+
+    #food .card {
+        width: calc((100% - 15px) / 2);
+    }
+
+    #container-1,
+    #container-2,
+    #container-3 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #activities img {
+        width: 70vw !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #hero > .text > h1,
+    #hero > .text > h2 {
+        font-size: 30px;
+    }
+
+    #hero > .text > h2 {
+        font-size: 50px;
+    }
+
+    #hero > .text > .xcontest {
+        max-width: 100%;
+    }
+
+    #introduce > div:nth-child(1),
+    #introduce-2 > div:nth-child(2) {
+        display: none !important;
+    }
+
+    #introduce > div:nth-child(2),
+    #introduce-2 > div:nth-child(1) {
+        width: 100% !important;
+    }
+
+    #food .card {
+        width: 100%;
+    }
+
+    .end h1 {
+        font-size: 24px !important;
     }
 }

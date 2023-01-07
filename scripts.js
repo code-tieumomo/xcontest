@@ -1,13 +1,19 @@
-AOS.init(
-    {
-        duration: 700,
-    }
-);
+AOS.init({
+    duration: 700,
+    offset: 50,
+});
 
-$('.activities').slick({
+var myOffcanvas = document.querySelector(".offcanvas");
+myOffcanvas.addEventListener("hidden.bs.offcanvas", function () {
+    document.querySelector(".menu-trigger").blur();
+});
+
+$(".activities").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
     variableWidth: true,
     centerMode: true,
-    centerPadding: '60px',
+    centerPadding: "60px",
     slidesToShow: 3,
     responsive: [
         {
@@ -15,18 +21,18 @@ $('.activities').slick({
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
-            }
+                centerPadding: "40px",
+                slidesToShow: 3,
+            },
         },
         {
             breakpoint: 480,
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
-            }
-        }
-    ]
+                centerPadding: "40px",
+                slidesToShow: 1,
+            },
+        },
+    ],
 });

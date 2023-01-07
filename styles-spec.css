@@ -1,6 +1,5 @@
 /* Activities */
 #activities {
-    margin-top: 100px;
     color: var(--primary-color);
 }
 
@@ -49,13 +48,49 @@
     background-repeat: no-repeat;
 }
 
+.end {
+    position: relative;
+}
+
+.end h1 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #ffcd5e;
+    font-size: 70px;
+}
+
+.offcanvas {
+    background-color: #ffcd5e;
+    height: fit-content !important;
+}
+
+.offcanvas-body ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.offcanvas-body ul a {
+    font-size: 20px;
+    font-family: "Sriracha", cursive;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 /* Meaning */
 #meaning {
-    background-image: url("./assets/frame.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 20px;
+    color: var(--primary-color);
+    font-family: "Sriracha", cursive;
+    font-size: 20px;
+    text-align: center;
 }
