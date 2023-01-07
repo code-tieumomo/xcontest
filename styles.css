@@ -9,6 +9,14 @@ body {
     font-family: "Nunito", sans-serif;
 }
 
+h1,h3,h5 {
+    font-family: "Sriracha", cursive;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
 /* Hero */
 #hero {
     background: url("./assets/hero.jpg") no-repeat center center;
@@ -74,12 +82,15 @@ body {
     text-transform: uppercase;
     line-height: 1;
     padding: 20px 0 10px;
+    font-weight: 900;
 }
 
 #hero > .text > .xcontest {
     font-size: 20px;
     color: var(--primary-color);
     margin-top: 30px;
+    max-width: 40%;
+    font-weight: 600;
 }
 
 #hero > .down-arrow {
@@ -88,6 +99,63 @@ body {
     color: var(--primary-color);
     animation: bounce 2s infinite;
 }
+
+/* Tết introduce */
+#introduce {
+    margin-top: 100px;
+    color: var(--primary-color);
+}
+
+#introduce > div:nth-child(1) > img {
+    border-radius: 10px;
+    height: 500px;
+}
+
+/* Tết introduce 2 */
+#introduce-2 {
+    color: var(--primary-color);
+}
+
+#introduce-2 > div:nth-child(1) > ul {
+    font-size: 20px;
+}
+
+#introduce-2 > div:nth-child(2) > img {
+    border-radius: 10px;
+    height: 500px;
+}
+
+/* Food */
+#foods {
+    margin-top: 100px;
+    color: var(--primary-color);
+}
+
+#food {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    border-radius: 0;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: var(--bs-card-spacer-y) 0
+}
+
+.card-img-top {
+    border-radius: 7px;
+    height: 165px;
+    object-fit: cover;
+}
+
 
 /* Animation */
 @keyframes bounce {
